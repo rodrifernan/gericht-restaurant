@@ -7,7 +7,7 @@ import {
   BsArrowRightShort,
 } from "react-icons/bs";
 import { images } from "../../constants";
-import { SubHeading, MenuItem } from "../../components";
+import { SubHeading} from "../../components";
 import { useRef } from "react";
 
 const galleryImages = [
@@ -23,9 +23,9 @@ const Gallery = () => {
   const scroll = (direction) => {
     const { current } = scrollRef;
     if (direction === "left") {
-      current -= 300;
+      current.scrollLeft -= 300;
     } else {
-      current += 300;
+      current.scrollLeft += 300;
     }
   };
 
@@ -55,7 +55,7 @@ const Gallery = () => {
             </div>
           ))}
         </div>
-        <div className="app__gallery-images_arrow">
+        <div className="app__gallery-images_arrows">
           <BsArrowLeftShort
             className="gallery__arrow-icon"
             onClick={() => scroll("left")}

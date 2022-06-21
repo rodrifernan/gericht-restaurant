@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Laurels.css";
 import { images, data } from "../../constants";
-import { SubHeading, MenuItem } from "../../components";
+import { SubHeading } from "../../components";
 
 const AwardCard = ({ award: { imgUrl, title, subtitle } }) => (
   <div className="app__laurels_awards-card">
